@@ -14,7 +14,7 @@ spring:
         predicates:
         - Path=/businesses/**
         filters:
-        - RewritePath=/businesses/(?<path>.*), /$\{path}
+        - RewritePath=/businesses/(?<path>.*), businesses/$\{path}
       - id: reactive-business-service
         uri: lb://reactive-business-service
         predicates:
