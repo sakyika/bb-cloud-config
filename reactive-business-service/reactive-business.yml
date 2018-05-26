@@ -1,1 +1,13 @@
-greetings=reactive-business.yml
+---
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://sakksoftware:sakksoftware@ds135540.mlab.com:35540/bb-reactive-business-service
