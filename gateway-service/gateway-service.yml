@@ -13,11 +13,11 @@ spring:
         uri: lb://business-service
         predicates:
         - Path=/business/**
-        #filters:
-        #- RewritePath=/business/(?<path>.*), /$\{path}
+        filters:
+        - RewritePath=/business/(?<path>.*), business/$\{path}
       - id: reactive-business-service
         uri: lb://reactive-business-service
         predicates:
         - Path=/reactive-business/**
-        #filters:
-        #- RewritePath=/reactive-business/(?<path>.*), /$\{path}
+        filters:
+        - RewritePath=/reactive-business/(?<path>.*), /$\{path}
