@@ -2,6 +2,14 @@
 server:
   port: 8084
 
+security:
+  oauth2:
+    resource: 
+      service-id: oauth2id
+    client:
+      access-token-validity-seconds: 3600
+      refresh-token-validity-seconds: 10000
+
 spring:
   data:
     mongodb:
